@@ -1,0 +1,53 @@
+?- tell('n3m3_min_cut.txt'),  A=[a,b,c], mapz( transitive3(A, []), [ ], F:C ), length( F, N ), N>23, length(C, K), K=6, nl, concat_order_domain( A, C, D ), write( D ), fail; told.
+true.
+
+[[cab,bca,bca],[bac,cba,cba],[bca,cab,bca],[bca,bca,cab],[cba,bac,cba],[cba,cba,bac]]
+[[abc,bca,bca],[bac,bac,cba],[bac,cba,bac],[bca,abc,bca],[bca,bca,abc],[cba,bac,bac]]
+[[acb,cba,cba],[cab,cab,bca],[cab,bca,cab],[bca,cab,cab],[cba,acb,cba],[cba,cba,acb]]
+[[abc,abc,bca],[abc,bca,abc],[acb,bac,bac],[bac,acb,bac],[bac,bac,acb],[bca,abc,abc]]
+[[abc,cab,cab],[acb,acb,cba],[acb,cba,acb],[cab,abc,cab],[cab,cab,abc],[cba,acb,acb]]
+[[abc,abc,cab],[abc,cab,abc],[acb,acb,bac],[acb,bac,acb],[cab,abc,abc],[bac,acb,acb]]
+
+
+% using sct2026.pl(6 Jan 2026)
+
+
+?- C=[[cab,bca,bca],[bac,cba,cba],[bca,cab,bca],[bca,bca,cab],[cba,bac,cba],[cba,cba,bac]], nm_domain( 3, 3, [a,b,c], [1,2,3], L, K, U ), subtract( U, C, D ), map_axiom_swf( L, D, SWF ), show_values( L, SWF, N, SWV ), nl, write( N: SWV ), dict_or_poss( D, SWF, Dict ), write( [Dict]), fail.
+
+210:123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123451234561234561234561234612356123456123456123456123456123561234561234561234561234561234512345612345612456[dict(3)]
+210:111111121122111111111111121122121122121122222222121122121122222222222222111111121122113313113313121122123321111111211221133131134412155123456121122222222121122121552225552225551211222222221233212345622255522656[poss]
+210:111111222222333333444444555555666666111111222222333333444444555555666666111111222222333333444444555555666661111112222223333334444455555666666111111222222333333444445555556666661111112222223333344444455555566666[dict(2)]
+210:111111111111111111111111111111111111222222222222222222222222222222222222333333333333333333333333333333333334444444444444444444444444444444444555555555555555555555555555555555556666666666666666666666666666666666[dict(1)]
+false.
+
+?- C=[[cab,bca,bca],[bac,cba,cba],[bca,cab,bca],[bca,bca,cab],[cba,bac,cba],[cba,cba,bac]], nm_domain( 3, 3, [a,b,c], [1,2,3], L, K, U ), subtract( U, C, D ), map_axiom_swf( L, D, SWF ), dict_or_poss( D, SWF, Dict ), Dict=poss,  \+ ( member( X, [[ A,B,_], [A,_,B], [_,A,B]] ), findall( [A,B]-S, member( X-S, SWF ), Dx0 ), sort( Dx0, Dx ), \+ show_swf( L, Dx ) ).
+        [1,2,3,4,5,6];
+1:abc   [1,1,1,1,1,1];
+2:acb   [1,2,1,1,2,2];
+3:bac   [1,1,1,1,1,1];
+4:bca   [1,1,1,1,1,1];
+5:cab   [1,2,1,1,2,2];
+6:cba   [1,2,1,1,2,2];
+        [1,2,3,4,5,6];
+1:abc   [1,1,1,1,1,1];
+2:acb   [1,2,1,1,2,2];
+3:bac   [1,1,1,1,1,1];
+4:bca   [1,1,1,1,1,1];
+5:cab   [1,2,1,1,2,2];
+6:cba   [1,2,1,1,2,2];
+        [1,2,3,4,5,6];
+1:abc   [1,1,1,1,1,1];
+2:acb   [1,2,1,1,2,2];
+3:bac   [1,1,1,1,1,1];
+4:bca   [1,1,1,1,1,1];
+5:cab   [1,2,1,1,2,2];
+6:cba   [1,2,1,1,2,2];
+C = [[cab, bca, bca], [bac, cba, cba], [bca, cab, bca], [bca, bca, cab], [cba, bac, cba], [cba, cba, bac]],
+L = [abc, acb, bac, bca, cab, cba],
+K = 216,
+U = [[abc, abc, abc], [abc, abc, acb], [abc, abc, bac], [abc, abc, bca], [abc, abc, cab], [abc, abc, cba], [abc, acb|...], [abc|...], [...|...]|...],
+D = [[abc, abc, abc], [abc, abc, acb], [abc, abc, bac], [abc, abc, bca], [abc, abc, cab], [abc, abc, cba], [abc, acb|...], [abc|...], [...|...]|...],
+SWF = [[abc, abc, abc]-abc, [abc, abc, acb]-abc, [abc, abc, bac]-abc, [abc, abc, bca]-abc, [abc, abc, cab]-abc, [abc, abc|...]-abc, [abc|...]-abc, [...|...]-acb, ... - ...|...],
+Dict = poss .
+
+?- 
