@@ -32,11 +32,11 @@ The code is implemented in **Prolog**. To reproduce the results shown in the pap
 1. Install a Prolog interpreter (e.g., SWI-Prolog).
 2. Load the main generator:
    ```prolog
-   ?- [main_generator].
+   ?- [main].
    ```
 3. Run the search for a specific configuration (e.g., $n=2, m=3$):
    ```prolog
-   ?- find_maximal_consistent_domains(2, 3, Results).
+   ?- histogram(2, 3, Results).
    ```
 
 ## 5. Key Results
