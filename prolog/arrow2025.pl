@@ -1,15 +1,9 @@
-﻿% arrow2019.pl
-% n-person version of icaart2014.pl( 30 Dec 2013 )
-% 4-6 Jun 2019 extremal lemma
-% 18-27, 31 Dec 2019 revised
-% 18-23 Jun 2024
-% 19 Jul 2024
-% 5-6 Aug 2024
-
-% 6-25 Nov 2025 (arrow2024x.pl)
+﻿% arrow2025.pl (27 Mar 2026)
+% created and maintained by: Kenryo Indo( kenryo.indo@gmail.com )
+% earlier version: icaart2014.pl( 30 Dec 2013 )
+% revisions: 4-6 Jun 2019; 18-27, 31 Dec 2019;
+% 18-23 Jun 2024; 19 Jul 2024; 5-6 Aug 2024; 6-25 Nov 2025 (arrow2024x.pl)
 % 29 Nov - 7 Dec 2025 (arrow2024x-29Nov.pl)
-
-% Kenryo Indo( kenryo.indo@gmail.com )
 %-----------------------------------------------------------------
 
 n_list( N, L ):-
