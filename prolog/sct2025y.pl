@@ -1,4 +1,4 @@
-% sct2025y.pl
+% sct2025y.pl (an earlier version)
 % 29-30 Dec 2025, 1-7, 10 Jan 2026(sct2025x3.pl)
 % 11-12 Jan 2026
 
