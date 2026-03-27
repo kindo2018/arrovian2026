@@ -35,10 +35,7 @@ The code is implemented in **Prolog**. To reproduce the results shown in the pap
    ```prolog
    ?- [main].
    ```
-3. Run the search for a specific configuration (e.g., $n=2, m=3$):
-   ```prolog
-   ?- histogram(2, 3, Results).
-   ```
+3. See demos in the source codes.
 
 ## 5. Key Results
 Our experiments reveal that topological "No-go" zones are concentrated in sparse singularities, restoring practical possibility for information management.
