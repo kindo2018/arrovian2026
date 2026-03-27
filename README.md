@@ -22,9 +22,10 @@ The framework uses **Abstract Managerial Information Schemata (AMIS)** to bridge
 * **Holonomy**: Detecting systemic failures via parallel transport around cycles in the organizational structure.
 
 ## 3. Repository Structure
-* `/prolog`: Contains the core recursive functional generator (main.pl) for generating binary aggregation rules and obstruction collecting, and helper programs (lib2025.pl). And the profile-based aggregation rule generator (arrow2025.pl) is also included.
-* `/data`: Results for various cases $(n, m)$, including maximal possibility rules, minimal cuts (obstructions).
-* `/docs`: Examples of maximal governance rules and their structural properties.
+* `/prolog`: Contains the core recursive functional generator (main.pl) for generating binary aggregation rules and obstruction collecting, inequality indices (iex_n2.pl), a helper program (lib2025.pl), and profile-based aggregation rule generation (or only for verification is also beneficial)  with various experimentation results including using the decisiveness implication schema (arrow2025.pl).
+* `/data`: Results for various cases $(n, m)$, including maximal possibility rules, minimal cuts (obstructions), as prolog programs.
+* `/docs`: Specific examples with text based figures of maximal governance rules, such as the $n=2, m=4$ case presented in the paper.
+
 
 ## 4. How to Run the Experiments
 The code is implemented in **Prolog**. To reproduce the results shown in the paper:
