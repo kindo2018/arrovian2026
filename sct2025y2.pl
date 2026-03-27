@@ -1,3 +1,12 @@
+%%% =================================================================
+%%% [COPY / MIRROR] Main execution script for Arrovian Possibility
+%%% =================================================================
+%%% This file is a top-level copy of /prolog/main.pl for convenience.
+%%% 
+%%% DEPENDENCIES(If Needed):
+%%%   - lib2025.pl (helper program)
+%%%   - Generated case for specific (n, m) stored in /data
+%%% =================================================================
 % sct2025y.pl
 % 29-30 Dec 2025, 1-6 Jan 2026 (sct2025),
 % 6-7(x) 11-13(x2,x3), 13-17(y), 18-21(y2) Jan 2026
