@@ -1,3 +1,8 @@
+?- A=[a,b,c,d], count((mapz( transitive(A, []), [ ], F:C ), length( F, N ), N>23, length(C, K), K=6), N ).
+A = [a, b, c, d],
+N = 40.
+
+
 ?- tell('n2m4_max_poss_all.txt' ), A=[a,b,c,d], mapz( transitive(A, []), [ ], F:C ), length( F, N ), N>23, length(C, K), K=6, nl, d_triple( A, Y ), findall( Z, order_as_concat( Y, _, _, Z ), L ), findall( P, ( member( P, C ), P=[X|_], order_as_concat( Y, _, _, X ) ), Cx), Cx\=[ ], findall( Ax - FBx, ( swf_value_in_triple( F, FA, FB, FC ), concat_order_profile( FC, FA, Ax ), ( member( Ax, Cx ) -> FBx = '*' ; order_as_concat( FC, _, FB, FBx ) ) ), H ), show_swf( L, H ), fail; told.
 true.
 
