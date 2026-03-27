@@ -1,92 +1,64 @@
-論文の内容に基づき、GitHubでそのまま使える `README.md` の全文案を作成しました。数理的な背景と計算機科学的な側面の両方をカバーしています。
 
----
-
-# 極大可能社会選択ルールにおける障害と変形について：計算実験
-
-本リポジトリは、日本オペレーションズ・リサーチ学会 2026年春季研究発表会にて報告された論文「極大可能社会選択ルールにおける障害と変形について：計算実験」の補遺資料および計算プログラムを公開するものです 。
-
-## 1. 概要
-
-アローの不可能性定理を、局所的な判断を大域的に整合させる際の位相幾何学的障害として捉え直します 。本プロジェクトでは、選好集計を層理論（Čech 1-コホモロジー）の言語へ翻訳し 、非推移性を生む原因となる「障害集合 」を特定します 。この障害を除去したドメイン上では、独裁制に限定されない一貫した社会選好（極大可能ルール）が構成可能であることを計算実験により示しています 。
-
-## 2. 理論的背景
-
-* 
-**コホモロジー障害**: 社会選好の非推移性をコボウンダリ  （ホロノミー）として同定します 。
+# Arrovian Possibility: Sheaf-Theoretic Navigation
+This repository contains the Prolog implementation and computational experiment data for the paper:  
+**"Holonomic Information Management: Sheaf-Theoretic Navigation of Arrovian Possibility"** (JSAI-IS AiBiz 2026).
 
 
-* 
-**可能性定理**: Alexander 双対性により、障害集合  を除去したドメイン  上では  となり、局所的な1-コチェインは大域的な1-コサイクルへと延長可能です 。
+## 1. Overview
+This project provides a novel framework to formalize organizational decision-making as a **patching problem** of local preferences within a **sheaf**. While Arrow's Impossibility Theorem identifies topological obstructions to global consistency , this methodology identifies and excises these "singularities" to restore **Arrovian Possibility** within maximal consistent domains.
 
-
-* 
-**障害の特定**: 非推移性を生む三項サブプロフィールを  と定義し、これを含む全プロフィール空間を障害集合とします 。
+### Key Features
+* **Sheaf-Theoretic Formalization**: Modeling preference aggregation as a section-patching problem over a simplicial complex.
+* **Singularity Excision**: Systematically identifying and removing intransitive triples (topological obstructions) using Alexander duality.
+* **Prolog Implementation**: A rigorous, recursive functional generator for exhaustive search and verification of maximal consistent regimes. So, the axiomatic theories of social choice can be intuitively described as a logical formula and is well-suited for exhaustive search..
+* **Prevalence Analysis**: Quantitative mapping showing that consistent domains cover 85% to 97% of the total preference space.
 
 
 
-## 3. 計算実験の結果
+## 2. Theoretical Background
+The framework uses **Abstract Managerial Information Schemata (AMIS)** to bridge the gap between social choice axioms and algebraic topology:
+* **IIA (Independence)**: Guaranteed by binary decomposition.
+* **Transitivity**: Formalized as the sheaf consistency condition.
+* **Holonomy**: Detecting systemic failures via parallel transport around cycles in the organizational structure.
 
-Prologを用いて、代替案数 、人数  の各条件における最小障害数と極大可能領域のサイズを算出しました 。
+## 3. Repository Structure
+* `/prolog`: Contains the core recursive functional generator and implication filtering algorithms.
+* `/data`: Results for various scenarios $(n, m)$, including violation distributions and inequality indices.
+* `/examples`: Examples of maximal governance rules and their structural properties.
 
-実験データ要約（表1より抜粋 ）
+## 4. How to Run the Experiments
+The code is implemented in **Prolog**. To reproduce the results shown in the paper:
 
-|  |  | 最小障害数  | 障害プロファイル比  | 可能領域の最大比  |
-| --- | --- | --- | --- | --- |
-| 2 | 3 | 2 | 2/36 | 94.4% |
-| 2 | 4 | 6 | 72/572 | 87.5% |
-| 2 | 5 | 9 | 2160/14400 | 85.0% |
-| 3 | 3 | 6 | 6/216 | 97.2% |
+1. Install a Prolog interpreter (e.g., SWI-Prolog).
+2. Load the main generator:
+   ```prolog
+   ?- [main_generator].
+   ```
+3. Run the search for a specific configuration (e.g., $n=2, m=3$):
+   ```prolog
+   ?- find_maximal_consistent_domains(2, 3, Results).
+   ```
 
-* 
- のケースでは、非制限領域の約85%を占める広大な極大可能領域が存在することが確認されました 。
+## 5. Key Results
+Our experiments reveal that topological "No-go" zones are concentrated in sparse singularities, restoring practical possibility for information management.
+* **Prevalence Ratios**:
+  * $(n, m) = (2, 3)$: 94.4% 
+  * $(n, m) = (2, 4)$: 87.5% 
+  * $(n, m) = (2, 5)$: 85.0% 
+* **Symmetry**: Odd-numbered groups ($n=3$) can achieve perfect fairness (inequality index $1/3$), unlike even-numbered groups.
 
-
-
-## 4. プログラムの構成
-
-本リポジトリに含まれるコードの詳細は以下の通りです。
-
-* 
-`src/`: 障害を特定し、集計ルールの極大性を検証するための Prolog 実装コード 。
-
-
-* 
-`data/`: 図1(a)-(d) に示された障害分布（Obstruction Distribution）の生成元データ 。
-
-
-
-## 5. 引用情報
-
-本研究を引用される際は、以下の情報をご利用ください。
-
+## 6. Citation
+If you use this code or framework in your research, please cite:
 ```bibtex
-@inproceedings{Indo2026JSOR,
-  author    = {犬童 健良 (Kenryo Indo)},
-  title     = {極大可能社会選択ルールにおける障害と変形について：計算実験},
-  booktitle = {日本オペレーションズ・リサーチ学会 2026年春季研究発表会},
-  year      = {2026},
-  url       = {https://github.com/kindo2018/or2026}
+@inproceedings{Indo2026,
+  author    = {Kenryo Indo},
+  title     = {Holonomic Information Management: Sheaf-Theoretic Navigation of Arrovian Possibility},
+  booktitle = {Proceedings of JSAI-IS AiBiz 2026},
+  publisher = {Springer},
+  year      = {2026}
 }
-
 ```
-
-## 6. 参考文献
-
-* [1] K. J. Arrow, Social Choice and Individual Values, 1951. 
-
-
-* [2] G. E. Bredon, Sheaf Theory, 1997. 
-
-
-* [3] J. Hansen and R. Ghrist, Opinion dynamics on discourse sheaves, 2020. 
-
-
-* [4] K. Indo, Progress in Economics Research, 18, pp. 163-187, 2011. 
-
-
+## Notes & Ackowledgements
+This work will be primarily presented at JSAI-IS AI Biz 2026 (June 2026, Takasaki, Japan). Preliminary findings related to certain experimental results were previously shared during the Decision Making session at the 2026 Spring Conference of the Operations Research Society of Japan (ORSJ), held at Reitaku University from March 4th to 6th, 2026. The core codebase for those experiments remains substantially consistent with this repository (see https://github.com/kindo2018/or2026).
 
 ---
-
-**次にお手伝いできること：**
-実際のPrologコード（`src/` に置くもの）の構成や、実験データ（CSVなど）のフォーマット作成もお手伝いしましょうか？
