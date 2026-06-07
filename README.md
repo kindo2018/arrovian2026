@@ -47,7 +47,7 @@ Our experiments reveal that topological "No-go" zones are concentrated in sparse
 
 ## 6. Citation
 If you use this code or framework in your research, please cite:
-Indo, K. (2026). Holonomic Information Management: Sheaf-Theoretic Navigation of Arrovian Possibility. In: Morinaga, S., Nakano, Y., Tono, K. (eds) New Frontiers in Artificial Intelligence. JSAI-isAI 2026. Lecture Notes in Computer Science(), vol 16608. Springer, Singapore. https://doi.org/10.1007/978-981-92-1527-0_12
+Indo, K. (2026). Holonomic Information Management: Sheaf-Theoretic Navigation of Arrovian Possibility. In: Morinaga, S., Nakano, Y., Tono, K. (eds) New Frontiers in Artificial Intelligence. JSAI-isAI 2026. Lecture Notes in Computer Science, vol 16608. Springer, Singapore. https://doi.org/10.1007/978-981-92-1527-0_12
 ```bibtex
 @inproceedings{Indo2026holonomic,
 author="Indo, Kenryo",
