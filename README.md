@@ -55,6 +55,7 @@ If you use this code or framework in your research, please cite:
   series    = {Lecture Notes in Artificial Intelligence},
   volume    = {16608},
   chapter   = {12},
+  pages     = {182--197},
   year      = {2026},
   publisher = {Springer},
   doi       = {10.1007/978-981-92-1527-0_12},
