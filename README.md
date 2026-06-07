@@ -47,20 +47,21 @@ Our experiments reveal that topological "No-go" zones are concentrated in sparse
 
 ## 6. Citation
 If you use this code or framework in your research, please cite:
+Indo, K. (2026). Holonomic Information Management: Sheaf-Theoretic Navigation of Arrovian Possibility. In: Morinaga, S., Nakano, Y., Tono, K. (eds) New Frontiers in Artificial Intelligence. JSAI-isAI 2026. Lecture Notes in Computer Science(), vol 16608. Springer, Singapore. https://doi.org/10.1007/978-981-92-1527-0_12
 ```bibtex
 @inproceedings{Indo2026holonomic,
-  author    = {Indo, Kenryo},
-  title     = {Holonomic Information Management: Sheaf-Theoretic Navigation of Arrovian Possibility},
-  booktitle = {JSAI-isAI 2026},
-  series    = {Lecture Notes in Artificial Intelligence},
-  volume    = {16608},
-  chapter   = {12},
-  pages     = {182--197},
-  year      = {2026},
-  publisher = {Springer},
-  doi       = {10.1007/978-981-92-1527-0_12},
-  isbn      = {978-981-92-1526-3},
-  note      = {AQ1}
+author="Indo, Kenryo",
+editor="Morinaga, Satoshi
+and Nakano, Yukiko
+and Tono, Katsuya",
+title="Holonomic Information Management: Sheaf-Theoretic Navigation of Arrovian Possibility",
+booktitle="New Frontiers in Artificial Intelligence",
+year="2026",
+publisher="Springer Nature Singapore",
+address="Singapore",
+pages="182--197",
+doi ="10.1007/978-981-92-1527-0_12",
+isbn="978-981-92-1527-0"
 }```
 ## Notes & Ackowledgements
 This work will be primarily presented at JSAI-IS AI Biz 2026 (June 2026, Takasaki, Japan). Preliminary findings related to certain experimental results were previously shared during the Decision Making session at the 2026 Spring Conference of the Operations Research Society of Japan (ORSJ), held at Reitaku University from March 4th to 6th, 2026. The core codebase for those experiments remains substantially consistent with this repository (see https://github.com/kindo2018/or2026).
