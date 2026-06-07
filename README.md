@@ -48,14 +48,19 @@ Our experiments reveal that topological "No-go" zones are concentrated in sparse
 ## 6. Citation
 If you use this code or framework in your research, please cite:
 ```bibtex
-@inproceedings{Indo2026,
-  author    = {Kenryo Indo},
+@inproceedings{Indo2026holonomic,
+  author    = {Indo, Kenryo},
   title     = {Holonomic Information Management: Sheaf-Theoretic Navigation of Arrovian Possibility},
-  booktitle = {Proceedings of JSAI-IS AiBiz 2026},
+  booktitle = {JSAI-isAI 2026},
+  series    = {Lecture Notes in Artificial Intelligence},
+  volume    = {16608},
+  chapter   = {12},
+  year      = {2026},
   publisher = {Springer},
-  year      = {2026}
-}
-```
+  doi       = {10.1007/978-981-92-1527-0_12},
+  isbn      = {978-981-92-1526-3},
+  note      = {AQ1}
+}```
 ## Notes & Ackowledgements
 This work will be primarily presented at JSAI-IS AI Biz 2026 (June 2026, Takasaki, Japan). Preliminary findings related to certain experimental results were previously shared during the Decision Making session at the 2026 Spring Conference of the Operations Research Society of Japan (ORSJ), held at Reitaku University from March 4th to 6th, 2026. The core codebase for those experiments remains substantially consistent with this repository (see https://github.com/kindo2018/or2026).
 
